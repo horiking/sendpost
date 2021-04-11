@@ -1,0 +1,9 @@
+{% if mail_list %}
+    <ul>
+    {% for mail in mail_list %}
+        <li><a href="{% url 'sendmail:detail' mail.id %}">{{ mail.name }}</a></li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No Mails in queu.</p>
+{% endif %}
